@@ -25,7 +25,7 @@ repos:
         args:
           - --ignore=D107,D203,D212,D401
   - repo: "https://github.com/PyCQA/pylint"
-    rev: v3.3.3
+    rev: v3.3.4
     hooks:
       - id: pylint
         exclude: (__init__|setup|(docs?|examples?|tests?|utils?)/.*)\.py$
@@ -34,12 +34,12 @@ repos:
             "--rcfile=./pyproject.toml"
           ]
   - repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+    rev: 6.0.0
     hooks:
       - id: isort
         additional_dependencies: [toml]
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: 3.3.0
+    rev: 3.3.1
     hooks:
       - id: sqlfluff-lint
         additional_dependencies: ["dbt-duckdb==1.9.0", "sqlfluff-templater-dbt"]
